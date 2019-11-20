@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<!--Deja que el navegador sepa que el sitio web está optimizado para móviles
+	https://bitly.com/
+
+https://bit.ly/2NTDQht-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#43A047">
+
+<meta name="Title" content="DOKENTAEGO ">
+<meta name="Author" content="Daniel Castro">
+<meta name="Subject" content="Elaboracion de paginas web con el lenguaje HTML">
+<meta name="Description" content="Herramientas informaticas para el cuidado y control de suelos y animales">
+<meta name="Keywords" content="Ruminates,Ganadero,Software">
+<meta name="Generator" content="Macromedia dreamweaver">
+<meta name="Language" content="Spanish">
+<meta name="Revisit" content="1 day">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="All">
+	
+	<title>DOKENTAEGO</title>
+       <link rel="shortcut icon" href="images/logo3.png">
+
+       <!--Import Google Icon Font-->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	   <!-- Compiled and minified CSS 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+ 	
+       <link href="css.css" rel="stylesheet">
+       <link href="animate.css" rel="stylesheet">
+       <link rel="shortcut icon" href="house.png">
+
+       <script src="jv/artyom.min.js"></script>
+       <script src="jv/annyang.min.js"></script>
+      
+ <script type="text/javascript">
+
+ 	function Hablar(x){
+ 		var speechSynthesisUtterance = new SpeechSynthesisUtterance(x); 
+	    speechSynthesisUtterance.lang = 'es-ES';
+	    //speechSynthesisUtterance.rate = document.getElementById("rate").value; // 0.1 to 10
+	    //speechSynthesisUtterance.volume = document.getElementById("volume").value; //0 to 2
+	    window.speechSynthesis.speak(speechSynthesisUtterance);
+	}
+ </script>
+<!--
+  <script type="text/javascript">
+ 	function reconocimiento_voz(){
+
+    if(annyang){
+        var commands ={
+            'Ana *valor':function(valor){
+                $("#parametro").val(valor);
+                console.log(valor);
+
+                if (valor=='Abre menú') {hablar2('contenido, Inicio, consejo, erosión , control , acerca de'); document.getElementById("menu-bar").checked=true;}
+                else if (valor=='Sierra menú') {hablar2('listo'); document.getElementById("menu-bar").checked=false;}
+                else if (valor=='Hola') {hablar2('hola');}
+                else if (valor.substr((valor.length*-2),3)=='soy'){
+                    console.log(valor.length+' '+(valor.length*-2)); 
+                  hablar2('Hola, '+valor.substr((4-valor.length))+' yo soy Ana, mucho gusto');
+                }
+                else if (valor=='erosión') {hablar2('listo');Cambiar('Estudioe')}
+                else if (valor=='control') {hablar2('listo');Cambiar('Controlalimentos')}
+               // else if (valor=='movimiento') {hablar2('listo');Cambiar('Movimiento')}
+                else if (valor=='consejo' || valor=='concejo' ) {consejo_h();}
+                else if (valor=='cerrar') {hablar2('listo');}
+                else if (valor=='inicio') {hablar2('listo');Cambiar('HICCSA')}      
+            }
+        };
+        annyang.addCommands(commands);
+        annyang.setLanguage("es");
+        annyang.start();
+        console.log("hola 1");
+    } 
+}
+ </script> -->
+
+</head>
+<body onload="Hablar('Hola Bienvenido a Méndez'">
+
+ <header>
+ 	<div class="navbar-fixed">
+ 	<nav class="nav-wrapper  red darken-4">  
+         <div class="container">
+     	 <a href="#" class="brand-logo">
+     	 	
+     	 	<img class="responsive-img"  src="images/logo1.png">
+     	 </a>
+
+     	 <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+     	 	<i class="material-icons">menu</i>
+     	 </a>
+
+      	 <ul class="right hide-on-med-and-down">
+       	 	<li><a href="#section_Inicio"><STRONG>Inicio</STRONG></a></li>
+         	<li><a href="#section_Servicios"><STRONG>Servicios</STRONG></a></li>
+         	<li><a href="#section_Portafolio"><STRONG>Portafolio</STRONG></a></li>
+         	<li><a href="#section_Nosotros"><STRONG>Nosotros</STRONG></a></li>
+         	<li><a href="#section_Contacto"><STRONG>Contacto</STRONG></a></li>
+         </ul>
+
+         </div>
+    </nav> 
+    </div>
+        <ul class="sidenav" id="menu-responsive">
+       	 	<li><a href="#section_Inicio">Inicio</a></li>
+         	<li><a href="#section_Servicios">Servicios</a></li>
+         	<li><a href="#section_Portafolio">Portafolio</a></li>
+         	<li><a href="#section_Nosotros">Nosotros</a></li>
+         	<li><a href="#section_Contacto">Contacto</a></li>
+         </ul>
+ </header>
+
+ <main>
+
+ <div class="fixed-action-btn">
+  <a class="btn-floating  red ">
+    <img class="responsive-img" src="images/mano.png" alt="" >
+  </a>
+  <ul>
+
+    <li><a class="btn-floating blue darken-4 pulse" href="https://www.facebook.com/Fusa_dokentaego-634618293621793/?__xts__[0]=68.ARDxgV_ZZgbFgkK6ou_wMAacdgilQx3nNotGUmPOIo8HpPgDVRw8KR8DFAILaxkJ8YMUP6bVFbcelffPIyS8XJWHYdzFftuv6b1Wv_ID_ZcmmoKFMpmjO4VlIcVmfXWTZtKfSzx3OVduWYl7DSU_tPUb_aJm5qosrij5gruhqHbrMurQgT0J-yJ6dp6RyzHYljpECA5Zc0Eam_VR_YOyzBskk2FD9dFOrtqmZ9KujU9bKfBg0VXU6A5KbV1GYpbDmJmfwPSUK2cM5Gg2EzxOcPzxPqNDb-N8gdlQl806ZaSp2rcPqn3YZuyl6hlX1pIUmQpaHM3Aa1IBceAIFXtLdxc" target="_blank" title="FaceBook"><img class="responsive-img" src="images/face2.png" alt="" ></a> </li>
+
+    <li><a class="btn-floating  orange darken-4 pulse" href="https://www.instagram.com/dokentaego_fusa/tagged/?hl=es-la" target="_blank" title="Instagram"><img class="responsive-img" src="images/instagram2.png" alt="" ></a></li>
+
+    <li><a class="btn-floating  green darken-1 pulse" href="https://wa.me/573123365439" target="_blank" title="whatsapp"><img class="responsive-img" src="images/whatsapp.png" alt="" ></a></li>
+
+  </ul>
+</div>
+<!-------------------------------------->
+<!-------------------------------------->
+ 	<div class="backg" id="section_Inicio">
+
+ 		<div class="row" style="background-color: rgba(0,0,0,0.8);">
+
+ 			<div class="col s12 m12">
+ 				<div class="left-align" >
+		 			<h5 >Si quieres aprender a nadar, salta dentro del agua. En la tierra seca, ningún estado mental te va a ayudar.</h5>
+		 		
+		 		    <h6 >-Bruce Lee <br>
+		 		    </h6>
+
+		 		    
+		 		</div>
+ 			</div>
+ 		</div>
+ 	</div>		
+<!-------------------------------------->
+<!-------------------------------------->
+ 	<div  id="section_Servicios">
+    <div class="container">
+		<div class="row">
+			<div class="col s12 m12 red-text">
+				<h4><STRONG>SERVICIOS</STRONG></h4>			
+			</div>
+			<div class="col s12 m12 center-align">
+				<img class="responsive-img " class="" src="images/servicio1.jpeg" alt="" >
+			</div>
+			<div class="col s12 m12">
+				<img class="responsive-img" src="images/servicio2.jpeg" alt="" >
+			</div>
+        </div>
+    </div>
+	</div>
+<!-------------------------------------->
+<!-------------------------------------->
+ 	<div  id="section_Portafolio" class="grey darken-4 white-text" >
+    <div class="container">   
+		<div class="row">
+			<div class="col s12 m12 white-text">
+				<h4><STRONG>PORTAFOLIO</STRONG></h4>
+			</div>
+
+			<div class="col s12 m12">
+				<h6>DOKENTAEGO Es un estilo marciales abierto que Utiliza la fuerza una vez dominada la agilidad y la destreza. Combina varios tradiciones de las artes marciales como lo son:<br><br>
+				–Karate <br>
+				–Tae Kwon Do <br>
+				–Kempo <br>
+				–Judo <br>
+				–Aikido <br>
+				–Kung Fu <br>
+				–Jiujitsu <br><br>
+				dentro de ellos se caracterizan por el uso de golpes, bloqueos, proyecciones, derribos,
+				desarmes y las patadas en todas sus expresiones; también se completa con el uso de 7 armas
+				marciales.
+		 	    </h6><br>
+			</div>
+        </div>
+    </div>
+	</div>
+<!-------------------------------------->
+<!-------------------------------------->
+ 	<div  id="section_Nosotros">
+    <div class="container">   
+		<div class="row">
+			<div class="col s12 m12 red-text">
+				<h4><STRONG>NOSOTROS</STRONG></h4>
+			</div>
+
+		<div class="col s12 m12">
+				
+				<div class="col s12 m12">
+				<h6>DOKENTAEGO Se crea el 16 de Octubre del 2006. En la Ciudad de Cabimas En deseo de Superación de las Artes Marciales en Zulia por MIGUEL VASQUEZ
+		 	    </h6><br>
+		        </div>
+		 		
+		 		<div class="col s6 m6">
+ 					<img  src="images/renshi2.png" width="200" height="198" alt="DOKENTAEGO ">
+     			</div>
+		 		
+		 		<div class="col s6 m6">
+     				<img  src="images/logo3.png" width="200" height="198" alt="DOKENTAEGO ">
+ 				</div>
+
+ 				<div class="col s12 m12">
+     				<img  src="images/uniforme1.jpeg" class="responsive-img" alt="DOKENTAEGO ">
+ 				</div>
+
+			<div class="col s12 m12 red-text">
+				<h5>PRINCIPIOS MORALES Y SOCIALES.</h5>	
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large grey darken-3" onclick="Hablar('1. Lealtad, por mi maestro, mi escuela y los principios de mi organización.')"><i class="material-icons">school</i></a>	
+				</div>
+				<div class="col s8 m9">
+               	    <h6><strong>1. </strong>Lealtad, por mi maestro, mi escuela y los principios de mi organización.</h6>
+                </div>
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large indigo" onclick="Hablar('2. Siempre me esforzare por lo bueno y rechazare lo malo.')"><i class="material-icons">fitness_center</i></a>
+				</div>
+				<div class="col s8 m9">
+               	    <h6><strong>2. </strong>Siempre me esforzare por lo bueno y rechazare lo malo.</h6>
+                </div>
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large red " onclick="Hablar('3. Nunca utilizare la violencia.')"><i class="material-icons">do_not_disturb</i></a>
+				</div>
+				<div class="col s8 m9">
+               	    <h6><strong>3. </strong>Nunca utilizare la violencia.</h6>
+                </div>
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large orange" onclick="Hablar('4. Trabajare por la creación de la armonía y la paz entre todas las personas que me rodean.')"><i class="material-icons">mood</i></a>
+				</div>
+				<div class="col s8 m9">
+					
+               	    <h6><strong>4. </strong>Trabajare por la creación de la armonía y la paz entre todas las personas que me rodean.</h6>
+                </div>
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large green " onclick="Hablar('5. Respetare lo natural de la vida.')"><i class="material-icons">nature_people</i></a>
+				</div>
+				<div class="col s8 m9">
+               	    <h6><strong>5. </strong>Respetare lo natural de la vida.</h6>
+                </div>
+			</div>
+
+			<div class="col s12 m6">
+				<div class="col s4 m3">
+					<br><a class="btn-floating btn-large blue " onclick="Hablar('6. Elevare al máximo el potencial de hermandad con cada uno de mis compañeros.')"><i class="material-icons">group</i></a>
+				</div>
+				<div class="col s8 m9">
+               	    <h6><strong>6. </strong>Elevare al máximo el potencial de hermandad con cada uno de mis compañeros.</h6>
+                </div>
+			</div>
+		</div>
+		
+ <div class=" white-text">
+    <div class="container">
+		<div class="row">
+			<div class="col s12 m12">
+			</div>
+        </div>
+    </div>
+    </div>
+		
+		<div class="col s12 m12">
+				<center>
+					 <div class="slider">
+					    <ul class="slides">
+					      <li>
+					        <img src="images/img/1.jpg"> <!-- random image -->
+					        <div class="caption right-align">
+					          <h4 class="texto-borde">No te estoy enseñando nada, solo te ayudo a que te conozcas a ti mismo.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Bruce Lee</h5>
+					        </div>
+					      </li>
+					      <li>
+					        <img src="images/img/2.jpg"> <!-- random image -->
+					        <div class="caption left-align">
+					          <h4 class="texto-borde">Si crees que algo es imposible, tu lo harás imposible.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-e">- Bruce Lee</h5>
+					        </div>
+					      </li>
+					      <li>
+					        <img src="images/img/3.jpg"> <!-- random image -->
+					        <div class="caption right-align">
+					          <h4 class="texto-borde">Un buen luchador debe sentir, más que percibir, su oportunidad de golpear.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Bruce Lee</h5>
+					        </div>
+					      </li>
+					      <li>
+					        <img src="images/img/4.jpg"> <!-- random image -->
+					        <div class="caption center-align">
+					          <h4 class="texto-borde">Primero transformé la chispa en una llama. Esta se tornó en fuego, y el fuego en un incendio incontrolable.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Cus D'Amato</h5>
+					        </div>
+					      </li>
+
+					      <li>
+					        <img src="images/img/5.jpg"> <!-- random image -->
+					        <div class="caption center-align">
+					          <h4 class="texto-borde">Un campeón es alguien que suda hasta quedar exhausto aunque nadie esté mirando.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Bas Rutten</h5>
+					        </div>
+					      </li>
+					      <li>
+					        <img src="images/img/6.jpg"> <!-- random image -->
+					        <div class="caption center-align">
+					          <h4 class="texto-borde">El Karate comienza y termina con cortesía.</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Gichin Funakoshi</h5>
+					        </div>
+					      </li>
+					      <li>
+					        <img src="images/img/7.jpg"> <!-- random image -->
+					        <div class="caption center-align">
+					          <h4 class="texto-borde">“Dominar al enemigo sin luchar, esta sí es la más alta habilidad.”</h4>
+					          <h5 class="texto-borde light white-text text-lighten-3">- Gichin Funakoshi</h5>
+					        </div>
+					      </li>
+					    </ul>
+					  </div>
+					  </center>
+ 				    </div>
+        </div>
+    </div>
+	</div>
+<!-------------------------------------->
+<!-------------------------------------->  
+    <div class="red darken-3 white-text" id="section_Que">
+    <div class="container">
+		<div class="row">
+			<div class="col s12 m12">
+				<h4 class=""></h4>
+			</div>
+        </div><br>
+    </div>
+    </div>
+<!-------------------------------------->
+<!-------------------------------------->  
+	<div class="container" id="section_Contacto">
+		<div class="row">
+			<div class="col s12 m12">
+				<h4 class="red-text"><strong>CONTACTO</strong></h4>
+				<h6><i class="red-text material-icons">map</i> Carrera 6#15-57 Fusagasuga-Cudinamarca-Colombia</h6>
+
+				<!--<blockquote><i class="red-text material-icons">map</i>Carrera 6#15-57 Fusagasuga-Cudinamarca-Colombia
+				</blockquote>
+
+				<h6><i class="red-text material-icons">email</i> menpaz7@hotmail.com</h6>
+				<h6><i class="red-text material-icons">call</i> 301 227 37 78 - 300 307 66 33</h6>-->
+				<h6><img class="responsive-img" src="images/wha.png"> 312 336 54 39</h6>
+				<br>
+				<img  src="images/logo4.png" width="182" height="86" alt="DOKENTAEGO ">
+			</div>
+				<!--<blockquote>
+					Carrera 34#9-24 Barrio las Brisas Neiva-Huila
+					 inicio,  servicios, portafolio, nosotros, contacto
+				</blockquote>-->
+			<div class="col s12 m12">
+				<iframe class="iframee" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3978.395528952282!2d-74.3640055856866!3d4.336614945915466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8e3f04f4fd3226a9%3A0xd9ad933e240cfabb!2sCra.%206%20%2315-94%2C%20Fusagasug%C3%A1%2C%20Cundinamarca!3m2!1d4.3366096!2d-74.3618169!5e0!3m2!1ses-419!2sco!4v1573266960399!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="max-width:100%;min-width:100%;width:auto;height:auto;border:0" allowfullscreen></iframe>
+				<br><br>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FFusa_dokentaego-634618293621793%2F&width=89&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="89" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+			</div>
+        </div>
+    </div>
+ </main>
+
+<footer class="page-footer grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Buscas Diseñar Un Sitio Web?</h5>
+                <p class="grey-text text-lighten-4">En Ancora te ayudamos a diseñar un sitio web como este, dale click  <a class="grey-text text-lighten-4" href="#!">AQUI</a> </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                
+                  <a href="" target="_blank" title="Ancora"><img class="responsive-img" src="images/anco.png" alt="" ></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright grey darken-4">
+            <div class="container">
+            © By Daniel Castro -Daanca
+            </div>
+          </div>
+        </footer>
+       
+  <!-- Compiled and minified JavaScript 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+      <!-- <script>
+       	 document.addEventListener('DOMContentLoaded',function(){
+       	 	M.AutoInit();
+       	 });
+       </script>-->
+
+ <script type="text/javascript">
+
+ 	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+ 	var instances = M.Carousel.init(elems,{
+    fullWidth: true,
+    numVisible: 1,
+    indicators:true,
+    dist: 0,
+    shift:2
+  });
+
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+
+   
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems,{
+    	interval:4000
+    });
+
+
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      
+      hoverEnabled: false
+    });
+
+ 	  });
+
+ </script>
+
+
+       <!--Start of Tawk.to Script-->
+       <!--
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5c00080cfd65052a5c9313dc/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>-->
+    <!--End of Tawk.to Script-->
+
+</body>
+</html>
